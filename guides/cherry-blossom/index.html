@@ -30,6 +30,27 @@
 <p>For every one part of vermilion, this recipe uses five parts of lead white. It does <em>not</em> mean five parts total. Counting the six units makes the shade easier to repeat.</p>
 <p>Tintsmith uses simulated pigments and an authored mixing model. This is a recipe for the game, not an instruction for mixing physical paints.</p>
 <div class="card"><h2 style="margin-top:0">Find your next colour</h2><p>Start free on iPhone or iPad. Free play includes occasional ads between Journey plates and an optional rewarded ad. A one-time Complete purchase unlocks the remaining gameplay and removes all ads. The act shown here requires Complete.</p><a class="cta" href="https://apps.apple.com/app/id6820236077">Get Tintsmith on the App Store</a></div>
+<aside id="launch-week-invitation" class="card" hidden aria-labelledby="launch-week-title">
+<h2 id="launch-week-title" style="margin-top:0">Enjoyed watching the colours return?</h2>
+<p>Tintsmith is in PixelPicked Launch Week. Watch the gameplay and, if it is your kind of puzzle, support it with a vote.</p>
+<p><a href="https://pixelpicked.com/game/2bd7ejLqK9x/tintsmith-color-mixing-puzzle">See Tintsmith and vote on PixelPicked</a></p>
+<p class="note">Voting requires a PixelPicked account. Ends <time datetime="2026-11-22T00:00:00Z">22 November at 00:00 UTC (02:00 Cairo)</time>.</p>
+</aside>
+<script>
+(() => {
+  const invitation = document.getElementById('launch-week-invitation');
+  const closesAt = Date.parse('2026-11-22T00:00:00Z');
+  let expiry;
+  function refreshInvitation() {
+    clearTimeout(expiry);
+    const remaining = closesAt - Date.now();
+    invitation.hidden = remaining <= 0;
+    if (remaining > 0) expiry = setTimeout(refreshInvitation, Math.min(remaining, 2147483647));
+  }
+  refreshInvitation();
+  window.addEventListener('pageshow', refreshInvitation);
+})();
+</script>
 <p class="note">Images are cropped from recorded iPhone simulator gameplay with automated moves. The pigment amounts, colours and result are unchanged. This is a demonstration, not a recording of a new player.</p>
 <footer><a href="../../">Home</a> · <a href="../../support/">Support</a> · <a href="../../privacy/">Privacy</a> · <a href="../../terms/">Terms</a><br>© 2026 Ahmed Alameldien · Guide published November 2026</footer>
 </main></body></html>
